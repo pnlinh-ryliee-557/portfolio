@@ -11,6 +11,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 48px)
 }
 
 body {
@@ -20,6 +21,10 @@ body {
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
     font-size: 16px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -66,6 +71,8 @@ img {
     --bg-color: #ffffff;     
     --bg-alt: #fff5f8;       
     --text-color: #1f2937;
+
+    --header-height: 84px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -80,6 +87,8 @@ img {
         --bg-color: #121212;     
         --bg-alt: #1f1f1f;
         --text-color: #f9fafb;
+
+        --header-height: 84px;
     }
 }
 
@@ -113,6 +122,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    height: var(--header-height);
 }
 
 header nav {
@@ -122,6 +132,7 @@ header nav {
 }
 
 .nav-link {
+    display: block;
     padding: 12px 24px;
     border-radius: 8px;
     font-weight: 500;
@@ -193,8 +204,8 @@ header nav {
 
 /* Content Formatting inside Components */
 .card-floating ul, .box-inset ul {
-    padding-left: 24px;
-    list-style-type: disc;
+    padding-left: 0;
+    list-style: none;
     margin-bottom: 1rem;
 }
 
@@ -231,13 +242,6 @@ main.container {
     padding-bottom: 48px;
 }
 
-/* Drawer / Sidebar */
-.drawer .card-floating {
-    padding: 24px;
-    position: sticky;
-    top: 100px;
-}
-
 /* Overlay & Dialog (Hộp thoại) */
 .overlay {
     position: fixed;
@@ -257,9 +261,12 @@ main.container {
     width: 90%;
     max-width: 900px;
     max-height: 90vh;
+    padding: 24px;
     overflow-y: auto;
     margin-bottom: 0; /* Override class card-floating */
 }
+    .dialog-header { margin-bottom: 16px; }
+    .dialog-content { height: 70vh; }
 
 /* Responsive Queries */
 @media (min-width: 768px) {
@@ -276,4 +283,77 @@ main.container {
     .grid-cols-2 {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* Layout Wrapper & Main Content */
+.layout-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+}
+
+.content-main {
+    flex-grow: 1;
+    min-width: 0; /* Ngăn nội dung tràn chiều ngang */
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* Drawer Component (Sticky & States) */
+.drawer {
+    position: sticky;
+    top: calc(var(--header-height) + 48px);
+    height: calc(100vh - var(--header-height) - 96px);
+    overflow-y: auto;
+    transition: width 0.3s ease, padding 0.3s ease;
+    flex-shrink: 0;
+    margin-bottom: 0; 
+}
+
+.drawer::-webkit-scrollbar { width: 4px; }
+.drawer::-webkit-scrollbar-thumb { background: var(--tertiary); border-radius: 4px; }
+
+.drawer-open { width: 280px; }
+.drawer-minimize { width: 80px; padding: 24px 12px; }
+.drawer-minimize .drawer-title { display: none; }
+.drawer-minimize .nav-link { font-size: 0; padding: 12px 8px; text-align: center; }
+
+/* Spacing cho Heading & Text trong Components */
+.drawer-title { margin-bottom: 16px; }
+
+.card-floating h2 { margin-bottom: 16px; }
+
+.task-desc { margin-bottom: 24px; }
+.task-desc h4 { margin-bottom: 8px; }
+
+.box-inset h4 { margin-bottom: 16px; }
+
+/* Component: Nút chi tiết góc phải */
+.btn-detail {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+}
+
+/* Component: Danh sách bước làm */
+.step-list {
+    padding-left: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.site-footer {
+    background-color: var(--bg-alt);
+    border-top: 1px solid var(--tertiary);
+    padding: 24px 0;
+    margin-top: auto; /* Đẩy footer xuống đáy cùng màn hình */
+}
+
+.site-footer p {
+    margin-bottom: 0; /* Reset margin mặc định của thẻ p */
 }
