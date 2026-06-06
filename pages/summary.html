@@ -8,10 +8,9 @@
 </head>
 <body class="gradient-bg">
 
-    <!-- Header & Navigation -->
-    <header class="bg-alt sticky-top" style="border-bottom: 1px solid var(--tertiary);">
-        <div class="container py-16">
-            <nav class="flex justify-center">
+    <header>
+        <div class="container">
+            <nav>
                 <a href="../index.html" class="nav-link">Giới thiệu</a>
                 <a href="./report.html" class="nav-link">Báo cáo bài tập</a>
                 <a href="./summary.html" class="nav-link text-primary" style="font-weight: bold;">Tổng kết</a>
@@ -19,25 +18,23 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="container content-main">
         <div class="card-floating">
-            <h1 class="text-primary text-center">Tổng kết môn học</h1>
+            <h1 class="text-primary text-center" style="margin-bottom: 48px;">Tổng kết môn học</h1>
             
             <div class="grid grid-cols-2">
-                <!-- Cột trái -->
                 <div class="box-inset">
-                    <h3 class="mb-16">Những kiến thức đã học được</h3>
-                    <ul style="padding-left: 20px; line-height: 1.8;">
+                    <h4 class="text-secondary" style="margin-bottom: 16px;">Những kiến thức đã học được</h4>
+                    <ul class="step-list">
                         <li>[Placeholder: Nêu các kiến thức chuyên môn...]</li>
                         <li>[Placeholder: Nêu các công cụ đã sử dụng (HTML, CSS, Git)...]</li>
                         <li>[Placeholder: Quy trình làm việc...]</li>
                     </ul>
                 </div>
 
-                <!-- Cột phải -->
                 <div class="box-inset">
-                    <h3 class="mb-16">Đánh giá bản thân & Định hướng</h3>
-                    <ul style="padding-left: 20px; line-height: 1.8;">
+                    <h4 class="text-secondary" style="margin-bottom: 16px;">Đánh giá bản thân & Định hướng</h4>
+                    <ul class="step-list">
                         <li>[Placeholder: Tự đánh giá mức độ hoàn thành...]</li>
                         <li>[Placeholder: Những khó khăn gặp phải...]</li>
                         <li>[Placeholder: Hướng khắc phục và phát triển trong tương lai...]</li>
@@ -45,16 +42,18 @@
                 </div>
             </div>
             
-            <div class="flex justify-center mt-40">
+            <div class="flex justify-center" style="margin-top: 48px;">
                  <a href="../index.html" class="btn bg-primary">Quay lại trang chủ</a>
             </div>
         </div>
     </main>
+
+    <footer class="site-footer">
+        <div class="container text-secondary flex flex-col items-center justify-center gap-8">
+            <p>&copy; 2026 Phùng Nhật Linh. Bản quyền thuộc về tác giả.</p>
+            <p>Liên hệ: <a href="mailto:pnhatlinh55555@gmail.com" class="text-secondary hover:text-primary">pnhatlinh55555@gmail.com</a></p>
+        </div>
+    </footer>
+
 </body>
-<footer>
-    <div class="container text-secondary flex items-center justify-center">
-        <p>&copy; 2026 Phùng Nhật Linh. Bản quyền thuộc về tác giả.</p>
-        <p>Liên hệ: <a href="mailto:[pnhatlinh55555@gmail.com]" class="text-secondary hover:text-primary">pnhatlinh55555@gmail.com</a></p>
-    </div>
-</footer>
 </html>
