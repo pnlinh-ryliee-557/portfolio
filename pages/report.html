@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Báo cáo bài tập - Portfolio</title>
+    <!-- Chú ý đường dẫn lùi về 1 thư mục -->
+    <link rel="stylesheet" href="../assets/css/global.css">
+</head>
+<body class="gradient-bg"> <!-- Thêm class gradient-bg vào body -->
+
+    <!-- Header & Navigation -->
+    <header class="bg-alt sticky-top" style="border-bottom: 1px solid var(--tertiary);">
+        <div class="container py-16">
+            <nav class="flex justify-center gap-24">
+                <a href="../index.html" class="nav-link">Giới thiệu</a>
+                <a href="./report.html" class="nav-link text-primary" style="font-weight: bold;">Báo cáo bài tập</a>
+                <a href="./summary.html" class="nav-link">Tổng kết</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-40">
+        <!-- Layout Drawer bên trái và Content bên phải -->
+        <div class="grid grid-drawer gap-24">
+            
+            <!-- Side Navigation Drawer -->
+            <aside class="drawer">
+                <div class="card-floating p-24 sticky-top" style="top: 80px;">
+                    <h3 class="text-primary mb-16">Danh mục bài tập</h3>
+                    <ul class="flex flex-col gap-12" style="list-style: none;">
+                        <li><a href="#bai1" class="nav-link">Bài 1: [Tên bài 1]</a></li>
+                        <li><a href="#bai2" class="nav-link">Bài 2: [Tên bài 2]</a></li>
+                        <li><a href="#bai3" class="nav-link">Bài 3: [Tên bài 3]</a></li>
+                        <li><a href="#bai4" class="nav-link">Bài 4: [Tên bài 4]</a></li>
+                        <li><a href="#bai5" class="nav-link">Bài 5: [Tên bài 5]</a></li>
+                        <li><a href="#bai6" class="nav-link">Bài 6: [Tên bài 6]</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Main Content: Các Section Bài Tập -->
+            <div class="flex flex-col gap-40">
+                
+                <!-- BÀI TẬP 1 -->
+                <section id="bai1" class="card-floating p-40">
+                    <h2 class="text-primary mb-16">Bài 1: [Tiêu đề bài tập 1]</h2>
+                    
+                    <div class="mb-24">
+                        <h4 class="mb-8">Mục tiêu / Yêu cầu:</h4>
+                        <p>Mô tả ngắn gọn yêu cầu của bài tập này. (Placeholder...)</p>
+                    </div>
+
+                    <!-- Phần trình bày bước làm (Inset Shadow) -->
+                    <div class="box-inset p-24" style="position: relative;">
+                        <!-- Nút xem chi tiết ở góc phải trên của box -->
+                        <button class="btn bg-primary" onclick="openDialog('dialog-pdf-1')" style="position: absolute; top: 16px; right: 16px; font-size: 0.9rem; padding: 6px 12px;">
+                            Xem chi tiết
+                        </button>
+                        
+                        <h4 class="mb-16 text-secondary">Trình bày bước làm:</h4>
+                        <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 8px; width: 80%;">
+                            <li><strong>Bước 1:</strong> Khởi tạo dự án và thiết lập cấu trúc thư mục.</li>
+                            <li><strong>Bước 2:</strong> Thiết kế giao diện trên Figma/Giấy.</li>
+                            <li><strong>Bước 3:</strong> Viết code HTML và chia component.</li>
+                            <li><strong>Bước 4:</strong> Styling với CSS, áp dụng biến màu sắc.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- BÀI TẬP 2 (Placeholder) -->
+                <section id="bai2" class="card-floating p-40">
+                    <h2 class="text-primary mb-16">Bài 2: [Tiêu đề bài tập 2]</h2>
+                    <p class="mb-24">Nội dung yêu cầu bài tập 2...</p>
+                    <div class="box-inset p-24 relative">
+                        <button class="btn bg-primary" onclick="openDialog('dialog-pdf-1')" style="position: absolute; top: 16px; right: 16px; font-size: 0.9rem; padding: 6px 12px;">Xem chi tiết</button>
+                        <ul style="padding-left: 20px;">
+                            <li>Các bước thực hiện bài 2...</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- BÀI TẬP 3 (Placeholder) -->
+                <section id="bai3" class="card-floating p-40">
+                    <h2 class="text-primary mb-16">Bài 3: [Tiêu đề bài tập 3]</h2>
+                    <p class="mb-24">Nội dung yêu cầu bài tập 3...</p>
+                    <div class="box-inset p-24 relative">
+                        <button class="btn bg-primary" onclick="openDialog('dialog-pdf-1')" style="position: absolute; top: 16px; right: 16px; font-size: 0.9rem; padding: 6px 12px;">Xem chi tiết</button>
+                        <ul style="padding-left: 20px;">
+                            <li>Các bước thực hiện bài 3...</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- BÀI TẬP 4 (Placeholder) -->
+                <section id="bai4" class="card-floating p-40">
+                    <h2 class="text-primary mb-16">Bài 4: [Tiêu đề bài tập 4]</h2>
+                    <p class="mb-24">Nội dung yêu cầu bài tập 4...</p>
+                    <div class="box-inset p-24 relative">
+                        <button class="btn bg-primary" onclick="openDialog('dialog-pdf-1')" style="position: absolute; top: 16px; right: 16px; font-size: 0.9rem; padding: 6px 12px;">Xem chi tiết</button>
+                        <ul style="padding-left: 20px;">
+                            <li>Các bước thực hiện bài 4...</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- BÀI TẬP 5 (Placeholder) -->
+                <section id="bai5" class="card-floating p-40">
+                    <h2 class="text-primary mb-16">Bài 5: [Tiêu đề bài tập 5]</h2>
+                    <p class="mb-24">Nội dung yêu cầu bài tập 5...</p>
+                    <div class="box-inset p-24 relative">
+                        <button class="btn bg-primary" onclick="openDialog('dialog-pdf-1')" style="position: absolute; top: 16px; right: 16px; font-size: 0.9rem; padding: 6px 12px;">Xem chi tiết</button>
+                        <ul style="padding-left: 20px;">
+                            <li>Các bước thực hiện bài 5...</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- BÀI TẬP 6 (Placeholder) -->
+                <section id="bai6" class="card-floating p-40">
+                    <h2 class="text-primary mb-16">Bài 6: [Tiêu đề bài tập 6]</h2>
+                    <p class="mb-24">Nội dung yêu cầu bài tập 6...</p>
+                    <div class="box-inset p-24 relative">
+                        <button class="btn bg-primary" onclick="openDialog('dialog-pdf-1')" style="position: absolute; top: 16px; right: 16px; font-size: 0.9rem; padding: 6px 12px;">Xem chi tiết</button>
+                        <ul style="padding-left: 20px;">
+                            <li>Các bước thực hiện bài 6...</li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Hộp thoại Dialog Overlay hiển thị PDF -->
+    <div id="dialog-pdf-1" class="overlay hidden">
+        <div class="dialog card-floating p-24 flex flex-col">
+            <div class="flex justify-between items-center mb-16">
+                <h3 class="text-primary">Chi tiết bài làm (PDF)</h3>
+                <!-- Nút đóng -->
+                <button class="btn bg-error" onclick="closeDialog('dialog-pdf-1')" style="padding: 4px 10px;">Đóng ✖</button>
+            </div>
+            
+            <!-- Vùng không gian hiển thị PDF -->
+            <div class="box-inset flex-grow w-100" style="height: 70vh;">
+                <!-- Sử dụng iframe để nhúng PDF, thay src bằng đường dẫn file pdf trong thư mục assets -->
+                <!-- Ví dụ: src="../assets/sample.pdf" -->
+                <iframe src="" width="100%" height="100%" style="border: none;" title="Báo cáo PDF">
+                    Trình duyệt của bạn không hỗ trợ xem PDF trực tiếp. Vui lòng tải xuống.
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script nhỏ gọn xử lý Dialog cho tĩnh thuần -->
+    <script>
+        function openDialog(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Khóa cuộn trang nền
+        }
+        function closeDialog(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Mở lại cuộn trang
+        }
+    </script>
+</body>
+<footer>
+    <div class="container text-secondary flex items-center justify-center">
+        <p>&copy; 2026 Phùng Nhật Linh. Bản quyền thuộc về tác giả.</p>
+        <p>Liên hệ: <a href="mailto:[pnhatlinh55555@gmail.com]" class="text-secondary hover:text-primary">pnhatlinh55555@gmail.com</a></p>
+    </div>
+</footer>
+</html>
