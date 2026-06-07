@@ -357,3 +357,51 @@ main.container {
 .site-footer p {
     margin-bottom: 0; /* Reset margin mặc định của thẻ p */
 }
+
+
+/* =========================================
+   RESPONSIVE - MOBILE (MAX-WIDTH: 440PX)
+========================================= */
+@media (max-width: 440px) {
+    /* 1. Bỏ padding ngang container để tối đa không gian */
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Giữ lại một chút lề ngang cho Header và Footer để chữ không dính sát mép */
+    .site-header nav,
+    .site-footer .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* 2. Ẩn hoàn toàn Drawer */
+    .drawer {
+        display: none !important;
+    }
+
+    /* 3. Giảm padding của floating card và bỏ bo góc (vì đã tràn viền) */
+    .card-floating {
+        padding: 24px 16px;
+        border-radius: 0;
+    }
+
+    /* Chỉnh nút chi tiết bài tập để không bị lẹm trên mobile */
+    .btn-detail {
+        position: static;
+        display: inline-block;
+        margin-bottom: 16px;
+    }
+
+    /* Ép các grid thành 1 cột xếp dọc dọc */
+    .grid-hero, .grid-cols-2 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    /* Giảm padding box-inset */
+    .box-inset {
+        padding: 16px;
+    }
+}
