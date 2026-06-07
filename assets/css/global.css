@@ -341,7 +341,7 @@ main.container {
 /* Component: Danh sách bước làm */
 .step-list {
     padding-left: 20px;
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     gap: 8px;
