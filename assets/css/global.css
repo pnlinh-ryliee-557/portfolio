@@ -215,7 +215,7 @@ header nav {
 
 /* Gradient Background (Dành riêng cho body trang Report) */
 .gradient-bg {
-    background: linear-gradient(180deg, var(--tertiary) 0%, var(--bg-color) 100%);
+    background: linear-gradient(180deg, var(--tertiary) 60%, var(--bg-color));
     /* background: var(--tertiary); */
     min-height: 100vh;
 }
