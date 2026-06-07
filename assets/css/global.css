@@ -327,7 +327,7 @@ main.container {
 .task-desc { margin-bottom: 24px; }
 .task-desc h4 { margin-bottom: 8px; }
 
-.box-inset h4 { margin-bottom: 16px; }
+.box-inset h4 { margin-bottom: 16px; color: var(--primary); }
 
 /* Component: Nút chi tiết góc phải */
 .btn-detail {
@@ -345,6 +345,10 @@ main.container {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.step-list li {
+    color: var(--secondary);
 }
 
 .site-footer {
